@@ -54,7 +54,6 @@ def signin(request):
 
 @api_view(["GET"])
 def user_info(request):
-    import pdb;pdb.set_trace()
     return Response({
         'user': request.user.username,
         'expires_in': expires_in(request.auth)
