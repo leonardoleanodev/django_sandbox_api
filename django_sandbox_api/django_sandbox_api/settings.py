@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_framework_simplejwt',
     'adriano_ecommerce_backend_api.apps.AdrianoEcommerceBackendApiConfig',
 ]
 
@@ -126,9 +127,12 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
+        'adriano_ecommerce_backend_api.authentication.ExpiringTokenAuthentication',  # custom authentication class
+        'rest_framework_simplejwt.authentication.JWTAuthentication'
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     )
 }
+
+TOKEN_EXPIRED_AFTER_SECONDS = 2*60*60 # NOTE: Token Expires in 2 hours
