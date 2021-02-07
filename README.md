@@ -1,3 +1,11 @@
+
+# How to run the microservice:
+
+`cd django_sando_box_api`
+`python manage.py migrate`
+`python manage.py runserver`
+
+
 # For profuction:
 
 - remove the secret key from settings and use environment variables to it not be availabel via repository, use something to encript the settings to load befor the runserver
