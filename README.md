@@ -14,11 +14,11 @@
 
 `python manage.py createsuperuser`
 
-# For profuction:
+# For production:
 
-- remove the secret key from settings and use environment variables to it not be availabel via repository, use something to encript the settings to load befor the runserver
+- remove the secret key from settings and use environment variables to it not be available via repository, use something to encrypt the settings to load before the runserver
 
-- reconfigure the database to a more secure one, in this project we are using sqlile, it would be bether to use a postgres or other relacional database
+- reconfigure the database to a more secure one, in this project we are using sqlite, it would be better to use a postgres or other relational database
 
 -
 
