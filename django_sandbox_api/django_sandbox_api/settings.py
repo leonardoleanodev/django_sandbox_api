@@ -42,7 +42,11 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
     'adriano_ecommerce_backend_api.apps.AdrianoEcommerceBackendApiConfig',
+#    'users.apps.UsersConfig',
+    'users',
 ]
+
+AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
